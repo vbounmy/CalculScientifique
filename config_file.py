@@ -1,0 +1,2 @@
+LENGTH = 15
+HEIGHT = 6

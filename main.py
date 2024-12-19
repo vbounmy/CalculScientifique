@@ -1,5 +1,6 @@
 import numpy
 import matplotlib.pyplot as plt
+from config_file import *
 
 def f(x):
     return x**2 - 8 * numpy.log(x) #x**2 = x puissance 2
@@ -24,7 +25,7 @@ def plot_function(f, start, end, step=0.01): #si on met un pas ça sera + préci
     x = numpy.arange(start, end, step)
     y = f(x)
 
-    plt.figure(figsize=(15, 6)) #15 en largeur et 6 en longueur
+    plt.figure(figsize=(LENGTH, HEIGHT)) #15 en largeur et 6 en longueur
     plt.plot(x, y)
     plt.show()
 
