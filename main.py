@@ -1,4 +1,5 @@
 import numpy
+import matplotlib.pyplot as plt
 
 def f(x):
     return x**2 - 8 * numpy.log(x) #x**2 = x puissance 2
@@ -19,11 +20,16 @@ def solve_equation(f, left, right, precision=10**(-3)):
 
     return middle
 
-def plot_function()
+def plot_function(f, start, end, step=0.01): #si on met un pas ça sera + précis car la précision sera constante peu importe la taille de l'intervalle
+    x = numpy.arange(start, end, step)
+    y = f(x)
+
+    plt.figure(figsize=(15, 6)) #15 en largeur et 6 en longueur
+    plt.plot(x, y)
+    plt.show()
 
 if __name__ == "__main__":
-    x = numpy.array([1, 2, 3])
-    y = f(x)
-    middle = solve_equation(f, 1, 2)
-    print(middle)
-    print(f(middle))
+    plot_function(f, start=0.01, end=5, step=0.01)
+    # middle = solve_equation(f, 1, 2)
+    # print(middle)
+    # print(f(middle))
