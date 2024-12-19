@@ -27,3 +27,4 @@ while right - left >= precision:
         left = middle
 
 print(middle)
+print(f(middle))
