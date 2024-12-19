@@ -19,6 +19,8 @@ def solve_equation(f, left, right, precision=10**(-3)):
 
     return middle
 
+def plot_function()
+
 if __name__ == "__main__":
     x = numpy.array([1, 2, 3])
     y = f(x)
